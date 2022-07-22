@@ -1589,21 +1589,49 @@ Expand a section by clicking it to see the table.</p>
 <h2 id="cpu">CPU</h2>
 <details class="info">
 <summary>Break on Unimplemented Instructions</summary>
-<p><!--- This file is a snippet --->
-|<strong>break_on_unimplemented_instructions</strong>|<strong>bool</strong>|
-|:--------------------------------------|:------:|
-| On (<em>default</em>)                        | true   |
-| Off (hack, <a href="(https://github.com/xenia-project/game-compatibility/issues?q=is%3Aopen+is%3Aissue+label%3Acpu-unimplemented-instruction)">needed for certain games</a>)| false  |</p>
+<!--- This file is a snippet --->
+<table>
+<thead>
+<tr>
+<th align="left"><strong>break_on_unimplemented_instructions</strong></th>
+<th align="center"><strong>bool</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">On (<em>default</em>)</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="left">Off (hack, <a href="(https://github.com/xenia-project/game-compatibility/issues?q=is%3Aopen+is%3Aissue+label%3Acpu-unimplemented-instruction)">needed for certain games</a>)</td>
+<td align="center">false</td>
+</tr>
+</tbody>
+</table>
 </details>
 <h2 id="config">Config</h2>
 <h2 id="content">Content</h2>
 <details class="info">
 <summary>License Mask</summary>
-<p><!--- This file is a snippet --->
-|<strong>license_mask</strong>                           |  <strong>#</strong>  |
-|:------------------------------------------|:-------:|
-| Deactivated/trial/demo mode (<em>default</em>)   |    0    |
-| Activated/full mode                       | -1 or 1 |</p>
+<!--- This file is a snippet --->
+<table>
+<thead>
+<tr>
+<th align="left"><strong>license_mask</strong></th>
+<th align="center"><strong>#</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Deactivated/trial/demo mode (<em>default</em>)</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">Activated/full mode</td>
+<td align="center">-1 or 1</td>
+</tr>
+</tbody>
+</table>
 </details>
 <h2 id="d3d12">D3D12</h2>
 <details class="info">
@@ -1691,12 +1719,29 @@ Allow texture and vertex fetch constants with invalid type - generally unsafe be
 </details>
 <details class="info">
 <summary>Render target path</summary>
-<p>Leave this option blank for auto-selection.
-|<strong>render_target_path_d3d12</strong>                               |<strong>string</strong>|
-|:----------------------------------------------------------|:--------:|
-| Auto-selection                                            |          |
-| RTV (recommended for speed)                               |  rtv     |
-| ROV (<em>if available</em>, for higher accuracy in certain cases)|  rov     |</p>
+<p>Leave this option blank for auto-selection.</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>render_target_path_d3d12</strong></th>
+<th align="center"><strong>string</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Auto-selection</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">RTV (recommended for speed)</td>
+<td align="center">rtv</td>
+</tr>
+<tr>
+<td align="left">ROV (<em>if available</em>, for higher accuracy in certain cases)</td>
+<td align="center">rov</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition info">
 <p class="admonition-title"><a href="https://github.com/xenia-project/xenia/wiki/ROV">What is ROV (rasterizer-ordered views)?</a></p>
 </div>
@@ -1718,7 +1763,7 @@ Horizontal Scale</p>
 </thead>
 <tbody>
 <tr>
-<td align="left">1x (<em>default</em>, 1280x)</td>
+<td align="left">1x (1280x, <em>default</em>)</td>
 <td align="center">1</td>
 </tr>
 <tr>
@@ -1728,6 +1773,22 @@ Horizontal Scale</p>
 <tr>
 <td align="left">3x (3840x)</td>
 <td align="center">3</td>
+</tr>
+<tr>
+<td align="left">4x (5120x)</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">5x (6400x)</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="left">6x (7680x)</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="left">7x (8960x)</td>
+<td align="center">7</td>
 </tr>
 </tbody>
 </table>
@@ -1744,16 +1805,32 @@ Vertical Scale:</p>
 </thead>
 <tbody>
 <tr>
-<td align="left">1x (<em>default</em>, 720x)</td>
+<td align="left">1x (x720, <em>default</em>)</td>
 <td align="center">1</td>
 </tr>
 <tr>
-<td align="left">2x (1440x)</td>
+<td align="left">2x (x1440)</td>
 <td align="center">2</td>
 </tr>
 <tr>
-<td align="left">3x (2160x)</td>
+<td align="left">3x (x2160)</td>
 <td align="center">3</td>
+</tr>
+<tr>
+<td align="left">4x (x2880)</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">5x (x3600)</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="left">6x (x4320)</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="left">7x (x5040)</td>
+<td align="center">7</td>
 </tr>
 </tbody>
 </table>
@@ -1763,11 +1840,25 @@ Vertical Scale:</p>
 </details>
 <details class="info">
 <summary>Vertical Sync</summary>
-<p><!--- This file is a snippet --->
-|<strong>vsync</strong>         |<strong>bool</strong>|
-|:-----------------|:------:|
-| On (<em>default</em>)   |  true  |
-| Off (uncaps FPS) |  false |</p>
+<!--- This file is a snippet --->
+<table>
+<thead>
+<tr>
+<th align="left"><strong>vsync</strong></th>
+<th align="center"><strong>bool</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">On (<em>default</em>)</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="left">Off (uncaps FPS)</td>
+<td align="center">false</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition failure">
 <p class="admonition-title"><strong>This won’t improve the framerate if your PC can’t handle running the game at it’s native FPS.</strong></p>
 </div>
